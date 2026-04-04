@@ -1,2 +1,172 @@
-<!-- Design reference for screen3_gantt_chart.html -->
-<html><body><h1>screen3_gantt_chart.html</h1></body></html>
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gantt Chart - Kinetic Gallery</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d9dde0",
+                        "tertiary": "#006576",
+                        "inverse-surface": "#0b0f10",
+                        "on-error-container": "#510017",
+                        "surface-container-low": "#eef1f3",
+                        "surface-container-high": "#dfe3e6",
+                        "surface-bright": "#f5f7f9",
+                        "background": "#f5f7f9",
+                        "surface": "#f5f7f9",
+                        "primary": "#2f42eb",
+                        "outline-variant": "#abadaf",
+                        "on-secondary": "#f8f0ff",
+                        "primary-fixed-dim": "#7b89ff",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "primary-container": "#8d98ff",
+                        "error-container": "#f74b6d",
+                        "on-primary": "#f3f1ff",
+                        "on-surface-variant": "#595c5e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#2c2f31",
+                        "secondary": "#6a37d4",
+                        "on-error": "#ffefef",
+                        "on-surface": "#2c2f31",
+                        "primary-fixed": "#8d98ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; min-height: max(884px, 100dvh); }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+    <!-- TopAppBar -->
+    <header class="w-full top-0 sticky z-50 bg-[#f5f7f9] dark:bg-[#0f172a] flex justify-between items-center px-6 py-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden cursor-pointer" onclick="window.location.href='screen8_profile.html'">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBraZm0w3XwAbWjm73ozhz0yInI2nKE3FzvnanLO14kMpPH1yqt42nKLFBops3aQvys-lCkx-ArsO6iu-7vJT0IW8tIqftJMndvhdGcDh4d2f30ekO68amY88bCfMprhl8ra2gdvS8SWNY-boi1BeGK9CjQfPyQFOPDgzU9r_tJwvm8IMhEs8irPVYT9mPGqHUE-rqv-5voW3xIEPoRj5Z3y1IseTBUAJJYOJawRSFkUy_KidzEBLJ_sWBxhNvSCfzQhDpkN4Mzb8Db"/>
+            </div>
+            <span class="text-xl font-bold text-[#2c2f31] dark:text-white font-headline">Roadmap</span>
+        </div>
+        <button class="text-[#3E51F7] transition-all duration-200 active:scale-95 hover:bg-[#eef1f3] p-2 rounded-full" onclick="window.location.href='screen11_calendar.html'">
+            <span class="material-symbols-outlined">calendar_month</span>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-6 pt-4 max-w-2xl mx-auto space-y-6">
+
+        <div class="flex justify-between items-center">
+            <h1 class="text-xl font-extrabold text-on-surface">Progetto Alpha</h1>
+            <select class="bg-surface-container-low border-none rounded-lg text-sm font-bold text-on-surface py-2 pl-3 pr-8 focus:ring-0">
+                <option>Novembre</option>
+                <option>Dicembre</option>
+            </select>
+        </div>
+
+        <!-- Fake Gantt Chart Area -->
+        <div class="bg-surface-container-lowest rounded-3xl p-4 shadow-sm border border-surface-container-highest overflow-x-auto no-scrollbar">
+            <div class="min-w-[600px]">
+                <!-- Header Giorni -->
+                <div class="grid grid-cols-[150px_1fr] gap-4 mb-4 border-b border-surface-container-highest pb-2">
+                    <div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest pl-2">Task</div>
+                    <div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-on-surface-variant">
+                        <div>1 Nov</div><div>2 Nov</div><div>3 Nov</div><div>4 Nov</div><div>5 Nov</div><div>6 Nov</div><div>7 Nov</div>
+                    </div>
+                </div>
+
+                <!-- Riga 1 -->
+                <div class="grid grid-cols-[150px_1fr] gap-4 items-center mb-3">
+                    <div class="text-sm font-semibold text-on-surface truncate pr-2 cursor-pointer hover:text-primary" onclick="window.location.href='screen1_task_detail.html'">UI Design</div>
+                    <div class="grid grid-cols-7 gap-1 h-8 relative">
+                        <div class="col-span-3 bg-primary/20 rounded-lg border border-primary/30 relative">
+                            <div class="absolute inset-0 bg-primary rounded-lg opacity-90 m-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Riga 2 -->
+                <div class="grid grid-cols-[150px_1fr] gap-4 items-center mb-3">
+                    <div class="text-sm font-semibold text-on-surface truncate pr-2 cursor-pointer hover:text-tertiary" onclick="window.location.href='screen1_task_detail.html'">Frontend Setup</div>
+                    <div class="grid grid-cols-7 gap-1 h-8 relative">
+                        <div class="col-start-3 col-span-4 bg-tertiary/20 rounded-lg border border-tertiary/30 relative">
+                            <div class="absolute inset-0 bg-tertiary rounded-lg opacity-90 m-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Riga 3 -->
+                <div class="grid grid-cols-[150px_1fr] gap-4 items-center mb-3">
+                    <div class="text-sm font-semibold text-on-surface truncate pr-2 cursor-pointer hover:text-secondary" onclick="window.location.href='screen1_task_detail.html'">Backend API</div>
+                    <div class="grid grid-cols-7 gap-1 h-8 relative">
+                        <div class="col-start-5 col-span-3 bg-secondary/20 rounded-lg border border-secondary/30 relative">
+                            <div class="absolute inset-0 bg-secondary rounded-lg opacity-90 m-1 flex items-center px-2">
+                                <span class="text-[10px] font-bold text-white truncate">In corso</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 w-full z-50 rounded-t-3xl shadow-xl bg-white/80 backdrop-blur-xl flex justify-around items-center px-4 pb-6 pt-3 border-t border-surface-container-highest">
+        <!-- Dashboard -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen6_dashboard.html'">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Dashboard</span>
+        </div>
+        <!-- Projects -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen4_projects.html'">
+            <span class="material-symbols-outlined">folder_managed</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Projects</span>
+        </div>
+        <!-- Gantt (ACTIVE) -->
+        <div class="flex flex-col items-center justify-center bg-[#eef1f3] dark:bg-[#334155] text-[#3E51F7] rounded-2xl p-2 w-16 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen3_gantt_chart.html'">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">timeline</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Gantt</span>
+        </div>
+        <!-- Profile -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen8_profile.html'">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+        </div>
+    </nav>
+</body>
+</html>
