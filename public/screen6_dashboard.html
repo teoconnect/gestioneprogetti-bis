@@ -1,2 +1,188 @@
-<!-- Design reference for screen6_dashboard.html -->
-<html><body><h1>screen6_dashboard.html</h1></body></html>
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Dashboard - Kinetic Gallery</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d9dde0",
+                        "tertiary": "#006576",
+                        "inverse-surface": "#0b0f10",
+                        "on-error-container": "#510017",
+                        "surface-container-low": "#eef1f3",
+                        "surface-container-high": "#dfe3e6",
+                        "surface-bright": "#f5f7f9",
+                        "background": "#f5f7f9",
+                        "surface": "#f5f7f9",
+                        "primary": "#2f42eb",
+                        "outline-variant": "#abadaf",
+                        "on-secondary": "#f8f0ff",
+                        "primary-fixed-dim": "#7b89ff",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "primary-container": "#8d98ff",
+                        "error-container": "#f74b6d",
+                        "on-primary": "#f3f1ff",
+                        "on-surface-variant": "#595c5e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#2c2f31",
+                        "secondary": "#6a37d4",
+                        "on-error": "#ffefef",
+                        "on-surface": "#2c2f31",
+                        "primary-fixed": "#8d98ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; min-height: max(884px, 100dvh); }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+    <!-- TopAppBar -->
+    <header class="w-full top-0 sticky z-50 bg-[#f5f7f9] dark:bg-[#0f172a] flex justify-between items-center px-6 py-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden cursor-pointer" onclick="window.location.href='screen8_profile.html'">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBraZm0w3XwAbWjm73ozhz0yInI2nKE3FzvnanLO14kMpPH1yqt42nKLFBops3aQvys-lCkx-ArsO6iu-7vJT0IW8tIqftJMndvhdGcDh4d2f30ekO68amY88bCfMprhl8ra2gdvS8SWNY-boi1BeGK9CjQfPyQFOPDgzU9r_tJwvm8IMhEs8irPVYT9mPGqHUE-rqv-5voW3xIEPoRj5Z3y1IseTBUAJJYOJawRSFkUy_KidzEBLJ_sWBxhNvSCfzQhDpkN4Mzb8Db"/>
+            </div>
+            <span class="text-xl font-bold text-[#2c2f31] dark:text-white font-headline">Dashboard</span>
+        </div>
+        <button class="text-[#3E51F7] transition-all duration-200 active:scale-95 hover:bg-[#eef1f3] p-2 rounded-full" onclick="window.location.href='screen10_notifications.html'">
+            <span class="material-symbols-outlined">notifications</span>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-6 pt-4 max-w-2xl mx-auto space-y-8">
+
+        <!-- Welcome Section -->
+        <section>
+            <h1 class="text-2xl font-extrabold tracking-tight text-on-surface">Ciao, Mario! 👋</h1>
+            <p class="text-on-surface-variant font-body mt-1">Ecco un riepilogo delle tue attività di oggi.</p>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="grid grid-cols-2 gap-4">
+            <div class="bg-surface-container-low p-5 rounded-3xl space-y-2 border-l-4 border-primary">
+                <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Task Completati</span>
+                <div class="flex items-baseline gap-2">
+                    <div class="text-3xl font-extrabold text-on-surface">12</div>
+                    <span class="text-xs font-bold text-tertiary">/ 20</span>
+                </div>
+            </div>
+            <div class="bg-surface-container-low p-5 rounded-3xl space-y-2 border-l-4 border-secondary">
+                <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Ore Registrate</span>
+                <div class="flex items-baseline gap-2">
+                    <div class="text-3xl font-extrabold text-on-surface">32</div>
+                    <span class="text-xs font-bold text-on-surface-variant">h</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activities -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-extrabold text-on-surface">Attività Recenti</h2>
+                <button class="text-primary text-sm font-bold" onclick="window.location.href='screen4_projects.html'">Vedi tutti</button>
+            </div>
+
+            <div class="space-y-3">
+                <!-- Activity Item 1 -->
+                <div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4 cursor-pointer hover:bg-surface-container-low transition-colors" onclick="window.location.href='screen1_task_detail.html'">
+                    <div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">design_services</span>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-on-surface line-clamp-1">Finalize Brand Identity Guidelines</p>
+                        <p class="text-xs text-on-surface-variant">Progetto Alpha • 2 ore fa</p>
+                    </div>
+                    <span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+                </div>
+
+                <!-- Activity Item 2 -->
+                <div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4 cursor-pointer hover:bg-surface-container-low transition-colors" onclick="window.location.href='screen1_task_detail.html'">
+                    <div class="w-10 h-10 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-on-surface line-clamp-1">Implement Login API</p>
+                        <p class="text-xs text-on-surface-variant">Progetto Beta • 5 ore fa</p>
+                    </div>
+                    <span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+                </div>
+
+                <!-- Activity Item 3 -->
+                <div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4 opacity-60">
+                    <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+                        <span class="material-symbols-outlined">check_circle</span>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-on-surface line-clamp-1 line-through">Database Migration</p>
+                        <p class="text-xs text-on-surface-variant">Progetto Gamma • Ieri</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 w-full z-50 rounded-t-3xl shadow-xl bg-white/80 backdrop-blur-xl flex justify-around items-center px-4 pb-6 pt-3 border-t border-surface-container-highest">
+        <!-- Dashboard (ACTIVE) -->
+        <div class="flex flex-col items-center justify-center bg-[#eef1f3] dark:bg-[#334155] text-[#3E51F7] rounded-2xl p-2 w-16 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen6_dashboard.html'">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Dashboard</span>
+        </div>
+        <!-- Projects -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen4_projects.html'">
+            <span class="material-symbols-outlined">folder_managed</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Projects</span>
+        </div>
+        <!-- Gantt -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen3_gantt_chart.html'">
+            <span class="material-symbols-outlined">timeline</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Gantt</span>
+        </div>
+        <!-- Profile -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen8_profile.html'">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+        </div>
+    </nav>
+</body>
+</html>

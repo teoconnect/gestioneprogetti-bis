@@ -1,2 +1,207 @@
-<!-- Design reference for screen4_projects.html -->
-<html><body><h1>screen4_projects.html</h1></body></html>
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Projects - Kinetic Gallery</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d9dde0",
+                        "tertiary": "#006576",
+                        "inverse-surface": "#0b0f10",
+                        "on-error-container": "#510017",
+                        "surface-container-low": "#eef1f3",
+                        "surface-container-high": "#dfe3e6",
+                        "surface-bright": "#f5f7f9",
+                        "background": "#f5f7f9",
+                        "surface": "#f5f7f9",
+                        "primary": "#2f42eb",
+                        "outline-variant": "#abadaf",
+                        "on-secondary": "#f8f0ff",
+                        "primary-fixed-dim": "#7b89ff",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "primary-container": "#8d98ff",
+                        "error-container": "#f74b6d",
+                        "on-primary": "#f3f1ff",
+                        "on-surface-variant": "#595c5e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#2c2f31",
+                        "secondary": "#6a37d4",
+                        "on-error": "#ffefef",
+                        "on-surface": "#2c2f31",
+                        "primary-fixed": "#8d98ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; min-height: max(884px, 100dvh); }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+    <!-- TopAppBar -->
+    <header class="w-full top-0 sticky z-50 bg-[#f5f7f9] dark:bg-[#0f172a] flex justify-between items-center px-6 py-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden cursor-pointer" onclick="window.location.href='screen8_profile.html'">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBraZm0w3XwAbWjm73ozhz0yInI2nKE3FzvnanLO14kMpPH1yqt42nKLFBops3aQvys-lCkx-ArsO6iu-7vJT0IW8tIqftJMndvhdGcDh4d2f30ekO68amY88bCfMprhl8ra2gdvS8SWNY-boi1BeGK9CjQfPyQFOPDgzU9r_tJwvm8IMhEs8irPVYT9mPGqHUE-rqv-5voW3xIEPoRj5Z3y1IseTBUAJJYOJawRSFkUy_KidzEBLJ_sWBxhNvSCfzQhDpkN4Mzb8Db"/>
+            </div>
+            <span class="text-xl font-bold text-[#2c2f31] dark:text-white font-headline">I Miei Progetti</span>
+        </div>
+        <button class="text-[#3E51F7] transition-all duration-200 active:scale-95 hover:bg-[#eef1f3] p-2 rounded-full" onclick="window.location.href='screen10_notifications.html'">
+            <span class="material-symbols-outlined">notifications</span>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-6 pt-4 max-w-2xl mx-auto space-y-6">
+
+        <!-- Search and Action -->
+        <section class="flex gap-3">
+            <div class="relative flex-1">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">search</span>
+                <input type="text" class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-none rounded-2xl shadow-sm focus:ring-2 focus:ring-primary text-on-surface font-body text-sm" placeholder="Cerca progetti...">
+            </div>
+            <button class="bg-primary text-on-primary w-12 h-12 rounded-2xl flex items-center justify-center shadow-md active:scale-95 transition-transform" onclick="window.location.href='screen2_task_configure.html'">
+                <span class="material-symbols-outlined">add</span>
+            </button>
+        </section>
+
+        <!-- Filters -->
+        <section class="flex overflow-x-auto gap-2 pb-2 no-scrollbar">
+            <button class="px-5 py-2 rounded-full bg-primary text-on-primary text-sm font-bold whitespace-nowrap">Tutti</button>
+            <button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest text-sm font-medium whitespace-nowrap hover:bg-surface-container-low">In Corso</button>
+            <button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-surface-container-highest text-sm font-medium whitespace-nowrap hover:bg-surface-container-low">Completati</button>
+        </section>
+
+        <!-- Project List -->
+        <section class="space-y-4">
+
+            <!-- Project Card 1 -->
+            <div class="bg-surface-container-lowest p-5 rounded-3xl space-y-4 shadow-sm border border-surface-container-lowest hover:border-primary/20 transition-colors cursor-pointer" onclick="window.location.href='screen11_calendar.html'">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">UI/UX Design</div>
+                        <h3 class="text-lg font-extrabold text-on-surface leading-tight">Redesign App Mobile</h3>
+                    </div>
+                    <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                </div>
+
+                <p class="text-sm text-on-surface-variant font-body line-clamp-2">Aggiornamento completo dell'interfaccia utente seguendo le nuove linee guida del brand system.</p>
+
+                <div class="space-y-2">
+                    <div class="flex justify-between text-xs font-bold text-on-surface-variant">
+                        <span>Progresso</span>
+                        <span class="text-primary">75%</span>
+                    </div>
+                    <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+                        <div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center pt-2">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest bg-surface-container-high overflow-hidden"><img src="https://i.pravatar.cc/100?img=1"></div>
+                        <div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest bg-surface-container-high overflow-hidden"><img src="https://i.pravatar.cc/100?img=2"></div>
+                        <div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest bg-primary-container text-primary flex items-center justify-center text-[10px] font-bold">+3</div>
+                    </div>
+                    <div class="flex items-center gap-1 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[16px]">schedule</span>
+                        <span class="text-xs font-medium">Scade 12 Nov</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="bg-surface-container-lowest p-5 rounded-3xl space-y-4 shadow-sm border border-surface-container-lowest hover:border-tertiary/20 transition-colors cursor-pointer" onclick="window.location.href='screen11_calendar.html'">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="text-xs font-bold text-tertiary mb-1 uppercase tracking-wider">Sviluppo Web</div>
+                        <h3 class="text-lg font-extrabold text-on-surface leading-tight">Migrazione a React 18</h3>
+                    </div>
+                    <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="flex justify-between text-xs font-bold text-on-surface-variant">
+                        <span>Progresso</span>
+                        <span class="text-tertiary">30%</span>
+                    </div>
+                    <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+                        <div class="h-full bg-tertiary rounded-full" style="width: 30%"></div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center pt-2">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest bg-surface-container-high overflow-hidden"><img src="https://i.pravatar.cc/100?img=3"></div>
+                    </div>
+                    <div class="flex items-center gap-1 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[16px]">schedule</span>
+                        <span class="text-xs font-medium">Scade 30 Nov</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 w-full z-50 rounded-t-3xl shadow-xl bg-white/80 backdrop-blur-xl flex justify-around items-center px-4 pb-6 pt-3 border-t border-surface-container-highest">
+        <!-- Dashboard -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen6_dashboard.html'">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Dashboard</span>
+        </div>
+        <!-- Projects (ACTIVE) -->
+        <div class="flex flex-col items-center justify-center bg-[#eef1f3] dark:bg-[#334155] text-[#3E51F7] rounded-2xl p-2 w-16 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen4_projects.html'">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_managed</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Projects</span>
+        </div>
+        <!-- Gantt -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen3_gantt_chart.html'">
+            <span class="material-symbols-outlined">timeline</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Gantt</span>
+        </div>
+        <!-- Profile -->
+        <div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='screen8_profile.html'">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+        </div>
+    </nav>
+</body>
+</html>
