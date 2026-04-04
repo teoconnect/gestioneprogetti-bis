@@ -45,6 +45,7 @@ model Task {
   description String?
   status      String       @default("Planned") // e.g., Planned, In Progress, Completed
   priority    String       @default("Normal") // e.g., Low, Normal, High
+  startDate   DateTime?
   dueDate     DateTime?
   budget      Float?
   hoursSpent  Float        @default(0)
