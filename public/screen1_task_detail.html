@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Task Detail - Kinetic Gallery</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#d9dde0",
+                    "tertiary": "#006576",
+                    "inverse-surface": "#0b0f10",
+                    "on-error-container": "#510017",
+                    "surface-container-low": "#eef1f3",
+                    "surface-container-high": "#dfe3e6",
+                    "surface-bright": "#f5f7f9",
+                    "background": "#f5f7f9",
+                    "surface": "#f5f7f9",
+                    "primary": "#2f42eb",
+                    "outline-variant": "#abadaf",
+                    "on-secondary": "#f8f0ff",
+                    "primary-fixed-dim": "#7b89ff",
+                    "secondary-fixed-dim": "#ceb9ff",
+                    "primary-container": "#8d98ff",
+                    "error-container": "#f74b6d",
+                    "on-primary": "#f3f1ff",
+                    "on-surface-variant": "#595c5e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#2c2f31",
+                    "secondary": "#6a37d4",
+                    "on-error": "#ffefef",
+                    "on-surface": "#2c2f31",
+                    "primary-fixed": "#8d98ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar Execution -->
+<header class="w-full top-0 sticky z-50 bg-[#f5f7f9] dark:bg-[#0f172a] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional male portrait with friendly expression in minimalist studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBraZm0w3XwAbWjm73ozhz0yInI2nKE3FzvnanLO14kMpPH1yqt42nKLFBops3aQvys-lCkx-ArsO6iu-7vJT0IW8tIqftJMndvhdGcDh4d2f30ekO68amY88bCfMprhl8ra2gdvS8SWNY-boi1BeGK9CjQfPyQFOPDgzU9r_tJwvm8IMhEs8irPVYT9mPGqHUE-rqv-5voW3xIEPoRj5Z3y1IseTBUAJJYOJawRSFkUy_KidzEBLJ_sWBxhNvSCfzQhDpkN4Mzb8Db"/>
+</div>
+<span class="text-xl font-bold text-[#2c2f31] dark:text-white font-headline">Dettaglio Task</span>
+</div>
+<button class="text-[#3E51F7] transition-all duration-200 active:scale-95 hover:bg-[#eef1f3] p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-6 pt-4 max-w-2xl mx-auto space-y-8">
+<!-- Task Header Section -->
+<section class="space-y-4">
+<div class="flex justify-between items-start">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface leading-tight">
+                    Finalize Brand Identity Guidelines
+                </h1>
+<div class="bg-primary-container/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    In Progress
+                </div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="event">event</span>
+<span class="text-sm font-medium">Oct 24, 2023</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-xl" data-icon="flag">flag</span>
+<span class="text-sm font-medium">High Priority</span>
+</div>
+</div>
+</section>
+<!-- Description Card -->
+<section class="bg-surface-container-lowest p-6 rounded-3xl space-y-3">
+<h2 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Description</h2>
+<p class="text-on-surface leading-relaxed font-body">
+                This task involves consolidating all design system tokens into a comprehensive PDF. Focus on chromatic utility, kinetic typography, and the "no-line" structural rule. Ensure all stakeholders have signed off on the primary gradient scale.
+            </p>
+</section>
+<!-- Metrics Grid (Asymmetric Bento-ish) -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-3xl space-y-2 border-l-4 border-primary">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Budget allocated</span>
+<div class="text-2xl font-extrabold text-on-surface">$4,500</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-3xl space-y-2 border-l-4 border-tertiary">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Hours Invested</span>
+<div class="text-2xl font-extrabold text-on-surface">32.5h</div>
+</div>
+</section>
+<!-- Sub-items Section -->
+<section class="space-y-4">
+<div class="flex justify-between items-center">
+<h2 class="text-xl font-extrabold text-on-surface">Sub-items</h2>
+<button class="bg-surface-container-high text-primary px-4 py-2 rounded-xl text-sm font-bold transition-all active:scale-95">
+                    + Add Task
+                </button>
+</div>
+<div class="space-y-3">
+<!-- Sub-item 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4">
+<div class="w-6 h-6 rounded-md border-2 border-primary-container flex items-center justify-center bg-primary-container/10">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-surface">Define Typography Scale</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span>
+</div>
+<!-- Sub-item 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4">
+<div class="w-6 h-6 rounded-md border-2 border-outline-variant flex items-center justify-center"></div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-surface">Create Gradient Tokens</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span>
+</div>
+<!-- Sub-item 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4 opacity-60">
+<div class="w-6 h-6 rounded-md border-2 border-primary-container flex items-center justify-center bg-primary-container/10">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-surface line-through">Review Component Hierarchy</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span>
+</div>
+</div>
+</section>
+<!-- Attachments -->
+<section class="space-y-4">
+<h2 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest px-1">Attachments</h2>
+<div class="flex overflow-x-auto pb-4 gap-4 no-scrollbar">
+<!-- PDF -->
+<div class="min-w-[140px] bg-surface-container-low p-4 rounded-3xl flex flex-col items-center gap-3">
+<div class="w-12 h-12 bg-error-container/20 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-3xl" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<span class="text-[11px] font-bold text-on-surface truncate w-full text-center">Spec_Final.pdf</span>
+</div>
+<!-- Image -->
+<div class="min-w-[140px] bg-surface-container-low p-4 rounded-3xl flex flex-col items-center gap-3">
+<div class="w-12 h-12 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern abstract user interface design with vibrant gradients and glassmorphism elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA110xwbGVz4FZf_zb3ArDfuNFPNJ5eWOHfGTvSq7nIRkAyY9qxxWfd_7Ja_6g_m-3JZeKv4fDaLeHuR1Njk_hlhZpWmlPc5HH1STxO9dXOK_HWmSgj7iMM3DdkSpuSQiFe1y6Q5nSzQnrUmgXGJSHb8ABSux8huBtwtZ_Z9rathusj3WoWgCiwdXiKlXwmHjw7LvxWVsewD5e39-zxwzV1GsBvjILRTK6i0BOmP7B0PYt7P3UidOZ153Zz5lI2VtLJ0awzKaOT61mj"/>
+</div>
+<span class="text-[11px] font-bold text-on-surface truncate w-full text-center">Moodboard.jpg</span>
+</div>
+<!-- Add New -->
+<div class="min-w-[100px] border-2 border-dashed border-outline-variant rounded-3xl flex flex-center items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant" data-icon="add">add</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-24 left-0 right-0 px-6 z-40">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-3xl font-extrabold text-lg shadow-[0_8px_24px_rgba(47,66,235,0.2)] transition-transform active:scale-[0.98]">
+            Complete Task
+        </button>
+</div>
+<!-- BottomNavBar Execution -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-3xl shadow-xl bg-white/80 backdrop-blur-xl flex justify-around items-center px-4 pb-6 pt-3">
+<!-- Dashboard -->
+<div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-[11px] font-medium">Dashboard</span>
+</div>
+<!-- Projects (ACTIVE) -->
+<div class="flex flex-col items-center justify-center bg-[#eef1f3] dark:bg-[#334155] text-[#3E51F7] rounded-2xl p-2 w-16 transition-transform duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="folder_managed" style="font-variation-settings: 'FILL' 1;">folder_managed</span>
+<span class="font-['Inter'] text-[11px] font-medium">Projects</span>
+</div>
+<!-- Gantt -->
+<div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+<span class="font-['Inter'] text-[11px] font-medium">Gantt</span>
+</div>
+<!-- Profile -->
+<div class="flex flex-col items-center justify-center text-[#595c5e] p-2 hover:opacity-80 transition-transform duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+</div>
+</nav>
+</body></html>

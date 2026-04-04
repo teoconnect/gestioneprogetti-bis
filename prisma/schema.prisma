@@ -1,0 +1,88 @@
+// This is your Prisma schema file.
+// We configure it to use SQLite for the testing environment or PostgreSQL for production.
+// We'll use SQLite by default for the local testing environment as requested.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id            String         @id @default(uuid())
+  name          String
+  email         String         @unique
+  password      String
+  profileImage  String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  projects      Project[]      @relation("ProjectMembers")
+  ownedProjects Project[]      @relation("ProjectOwner")
+  tasks         Task[]         @relation("TaskAssignees")
+  notifications Notification[]
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  status      String   @default("Active") // e.g., Active, Completed
+  progress    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  ownerId     String
+  owner       User     @relation("ProjectOwner", fields: [ownerId], references: [id])
+  members     User[]   @relation("ProjectMembers")
+  tasks       Task[]
+}
+
+model Task {
+  id          String       @id @default(uuid())
+  title       String
+  description String?
+  status      String       @default("Planned") // e.g., Planned, In Progress, Completed
+  priority    String       @default("Normal") // e.g., Low, Normal, High
+  dueDate     DateTime?
+  budget      Float?
+  hoursSpent  Float        @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  projectId   String
+  project     Project      @relation(fields: [projectId], references: [id])
+  assignees   User[]       @relation("TaskAssignees")
+  subtasks    Subtask[]
+  attachments Attachment[]
+}
+
+model Subtask {
+  id        String   @id @default(uuid())
+  title     String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  taskId    String
+  task      Task     @relation(fields: [taskId], references: [id])
+}
+
+model Attachment {
+  id        String   @id @default(uuid())
+  fileName  String
+  url       String
+  fileType  String
+  createdAt DateTime @default(now())
+  taskId    String
+  task      Task     @relation(fields: [taskId], references: [id])
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  message   String
+  type      String // e.g., Email, Push, In-App
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
