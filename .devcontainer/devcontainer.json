@@ -4,5 +4,5 @@
   "forwardPorts": [3000],
   "onCreateCommand": "npm install && npx prisma generate",
   "postCreateCommand": "npx prisma db push",
-  "postStartCommand": "nohup npm start > server_output.log 2>&1 &"
+  "postStartCommand": "nohup npm run dev > server_output.log 2>&1 &"
 }
